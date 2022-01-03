@@ -32,6 +32,15 @@ android {
     }
 }
 
+cargo {
+    module = "../rust"
+    verbose = true
+    libname = "plasma"
+    apiLevel = 21
+    targets = ["arm64", "x86_64"]
+    profile = "release"
+}
+
 afterEvaluate {
     // The `cargoBuild` task isn't available until after evaluation.
     android.applicationVariants.all { variant ->
