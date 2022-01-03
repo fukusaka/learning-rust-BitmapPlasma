@@ -8,6 +8,12 @@ android {
         applicationId 'com.example.plasma'
         minSdkVersion 14
         targetSdkVersion 28
+
+        externalNativeBuild {
+            cmake {
+                arguments "-DCMAKE_BUILD_TYPE=Release"
+            }
+        }
     }
     buildTypes {
         release {
