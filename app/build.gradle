@@ -9,12 +9,6 @@ android {
         applicationId 'com.example.plasma'
         minSdkVersion 14
         targetSdkVersion 28
-
-        externalNativeBuild {
-            cmake {
-                arguments "-DCMAKE_BUILD_TYPE=Release"
-            }
-        }
     }
     buildTypes {
         release {
@@ -22,12 +16,6 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'),
                          'proguard-rules.pro'
-        }
-    }
-    externalNativeBuild {
-        cmake {
-            version '3.18.1'
-            path 'src/main/cpp/CMakeLists.txt'
         }
     }
 }
